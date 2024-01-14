@@ -4,6 +4,8 @@ from polaris.models import Asset
 def toml_contents(request, *args, **kwargs): 
   asset = Asset.objects.first()
   asset2 = Asset.objects.last()
+  print(asset)
+  print(asset2)
 
   return {
     "DOCUMENTATION":
@@ -53,6 +55,13 @@ def toml_contents(request, *args, **kwargs):
         "anchor_asset_type": "fiat",
         "anchor_asset": "NGN",
         "status": "test",
+      },
+      {
+        "code": "SRT",
+        "issuer": "GCDNJUBQSX7AJWLJACMJ7I4BC3Z47BQUTMHEICZLE6MU4KQBRYG5JY6B",
+        "status": "test",
+        "is_asset_anchored": "false",
+        "desc": "Stellar Reference Token (SRT) is an asset issued on testnet and is used as an anchored asset for this reference server for demonstration and testing purposes."
       }
     ]
   }

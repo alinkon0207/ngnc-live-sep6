@@ -35,12 +35,12 @@ if os.path.exists(env_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # Productions
-DEBUG = False
-ALLOWED_HOSTS = ['.anchor.ngnc.online', 'ngnc.onrender.com']
+# DEBUG = False
+# ALLOWED_HOSTS = ['.anchor.ngnc.online', 'ngnc.onrender.com']
 
 # (In development they should be true)
-# DEBUG = True
-# ALLOWED_HOSTS = []
+DEBUG = True
+ALLOWED_HOSTS = []
 
 # Application definition
 INSTALLED_APPS = [
@@ -72,39 +72,39 @@ MIDDLEWARE = [
 
 FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 
-CORS_ALLOW_ALL_ORIGINS  = True
-CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = ('https://ngnc.online',)
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOW_ALL_ORIGINS  = True
+# CORS_ALLOW_CREDENTIALS = True
+# CORS_ORIGIN_WHITELIST = ('https://ngnc.online',)
+# CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOW_METHODS = [
-'DELETE',
-'GET',
-'OPTIONS',
-'PATCH',
-'POST',
-'PUT',
-]
+# CORS_ALLOW_METHODS = [
+# 'DELETE',
+# 'GET',
+# 'OPTIONS',
+# 'PATCH',
+# 'POST',
+# 'PUT',
+# ]
 
-CORS_ALLOW_HEADERS = [
-'accept',
-'accept-encoding',
-'authorization',
-'content-type',
-'dnt',
-'origin',
-'user-agent',
-'x-csrftoken',
-'x-requested-with',
-]
+# CORS_ALLOW_HEADERS = [
+# 'accept',
+# 'accept-encoding',
+# 'authorization',
+# 'content-type',
+# 'dnt',
+# 'origin',
+# 'user-agent',
+# 'x-csrftoken',
+# 'x-requested-with',
+# ]
 
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 
-SESSION_COOKIE_AGE = 3000
-SESSION_COOKIE_DOMAIN = '.ngnc.online'
+# SESSION_COOKIE_AGE = 3000
+# SESSION_COOKIE_DOMAIN = '.ngnc.online'
 SESSION_COOKIE_HTTPONLY = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")

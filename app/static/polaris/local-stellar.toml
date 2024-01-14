@@ -27,7 +27,7 @@ email = "tomisinleshi@linkio.africa"
 
 [[CURRENCIES]]
 code = "NGNC"
-issuer = "GASBV6W7GGED66MXEVC7YZHTWWYMSVYEY35USF2HJZBLABLYIFQGXZY6"
+issuer = "GB7Z5USHHEGCAMPUXUKNUB6TSHKMXXXA5SJV5FGJNOQZUFFZPACUCA4S"
 name = "NGN Coin"
 desc = "Asset backed token pegged 1:1 to Nigerian Naira"
 display_decimals = 2
