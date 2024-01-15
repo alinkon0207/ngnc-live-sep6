@@ -20,6 +20,7 @@ class AnchorCustomer(CustomerIntegration):
         #     token.memo or params.get("memo"),
         #     "id" if token.memo else params.get("memo_type")
         # )
+        user = user_for_account(token.account)
         # fields = fields_for_type(params.get("type"))
         if not user:
             return {
