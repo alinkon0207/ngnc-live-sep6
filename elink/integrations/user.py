@@ -12,7 +12,26 @@ def user_for_account(account_id):
         or\
         ElinkStellarAccount.objects.get(memo=account_id)
         
+        print (' ---------------      stellar-account', stellar_account)
+        
         return ElinkUser.objects.get(id=stellar_account.user.id)
+    except:
+        return None
+
+def save_customer(account, fields):
+    
+    try:
+        return ElinkStellarAccount.objects.create(
+            id=15,
+            memo = "1",
+            memo_type = "2",
+            account = account,
+            muxed_account = account,
+            secret_key = "14233",
+            confirmed = True,
+            confirmation_token = "12341423",
+            user_id=12345,
+        )
     except:
         return None
 

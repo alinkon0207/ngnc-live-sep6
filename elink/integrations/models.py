@@ -129,7 +129,7 @@ class ElinkStellarAccount(models.Model):
     memo_type          = models.TextField(null=True, blank=True)
     account            = models.CharField(max_length=100)
     muxed_account      = models.TextField(null=True, blank=True)
-    # secret_key         = models.CharField(max_length=100)
+    secret_key         = models.CharField(max_length=100)
     confirmed          = models.BooleanField(default=False)
     confirmation_token = models.CharField(max_length=36, default=get_new_token)
 

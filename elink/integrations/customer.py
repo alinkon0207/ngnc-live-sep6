@@ -3,7 +3,7 @@ from polaris.integrations import CustomerIntegration
 from polaris.sep10.token import SEP10Token
 from polaris.models import Transaction
 from rest_framework.request import Request
-from .user import user_for_account, fields_for_type
+from .user import user_for_account, fields_for_type, save_customer
 
 class AnchorCustomer(CustomerIntegration):
     def get(
@@ -19,12 +19,12 @@ class AnchorCustomer(CustomerIntegration):
         print('customer', token)
         
         fields = fields_for_type(params.get("type"))
-        print('-----------------------------------------------')
-        print(fields)
+
         return {
             "status": "NEEDS_INFO",
             "fields": fields
         }
+        
         # user = user_for_account(
         #     token.muxed_account or token.account,
         #     token.memo or params.get("memo"),
@@ -76,7 +76,14 @@ class AnchorCustomer(CustomerIntegration):
         params: Dict,
         *args: List,
         **kwargs: Dict
-    ) -> Dict:
+    ) -> str:
         
         print('-------------------- PUT ------------------')
+        print(token.account)
         
+        fields = fields_for_type(params.get("type"))
+        
+        customer = save_customer(token.account, fields)
+        if customer == None:
+            return ""
+        return str(customer.id)

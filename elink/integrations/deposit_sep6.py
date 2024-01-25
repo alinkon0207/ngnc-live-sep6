@@ -46,7 +46,7 @@ class AnchorDepositSep6(DepositIntegration):
             transaction.asset.significant_decimals
         )
         transaction.save()
-        # user.add_transaction(transaction)
+
         return {
             "how": (
               "asdfasdfasdfasdfasdf"  
