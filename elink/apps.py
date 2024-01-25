@@ -1,7 +1,7 @@
 from django.apps import AppConfig
 
 class AnchorConfig(AppConfig):
-    name = "app"
+    name = "elink"
 
     def ready(self):
         from polaris.integrations import register_integrations

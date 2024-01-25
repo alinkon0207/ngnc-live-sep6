@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "polaris",
-    "app"
+    "elink"
 ]
 
 MIDDLEWARE = [
@@ -110,7 +110,7 @@ SESSION_COOKIE_HTTPONLY = True
 STATIC_ROOT = os.path.join(BASE_DIR, "collectstatic")
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
-ROOT_URLCONF = 'app.urls'
+ROOT_URLCONF = 'elink.urls'
 
 TEMPLATES = [
     {
@@ -128,7 +128,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'app.wsgi.application'
+WSGI_APPLICATION = 'elink.wsgi.application'
 
 
 # Database
