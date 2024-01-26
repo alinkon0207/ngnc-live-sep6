@@ -3,7 +3,6 @@ from .info import info
 from .customer import AnchorCustomer
 from .deposit import AnchorDeposit
 from .deposit_sep6 import AnchorDepositSep6
-from .deposit_sep31 import AnchorCrossBorderPayment
 from .withdraw import AnchorWithdraw
 from .withdraw_sep6 import AnchorWithdrawSep6
 from .rails import AnchorRails
@@ -17,5 +16,4 @@ __all__ = [
     "AnchorWithdraw",
     "AnchorWithdrawSep6",
     "AnchorRails",
-    "AnchorCrossBorderPayment",
 ]
