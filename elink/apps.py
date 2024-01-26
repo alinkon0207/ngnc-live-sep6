@@ -15,6 +15,7 @@ class AnchorConfig(AppConfig):
             AnchorWithdraw,
             AnchorWithdrawSep6,
             AnchorRails,
+            AnchorCrossBorderPayment,
         )
 
         register_integrations(
@@ -24,4 +25,5 @@ class AnchorConfig(AppConfig):
             deposit=AnchorDepositSep6(),
             withdrawal=AnchorWithdrawSep6(),
             rails=AnchorRails(),
+            sep31_receiver=AnchorCrossBorderPayment(),
         )

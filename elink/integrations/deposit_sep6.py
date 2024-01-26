@@ -49,7 +49,9 @@ class AnchorDepositSep6(DepositIntegration):
 
         return {
             "how": (
-              "asdfasdfasdfasdfasdf"  
+                "Make a wire transfer to the following account. "
+                "Accounting Number: 94922545 ; Routing Number: 628524560. "
+                "Users MUST include the following memo: "
             ),
             "extra_info": {
                 "accounting_number": "94922545",

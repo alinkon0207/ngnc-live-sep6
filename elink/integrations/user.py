@@ -19,6 +19,36 @@ def user_for_account(account_id):
         print('Error')
         return None
 
+def user_for_id(account_id):
+    #to get the user account linked to a stellar public key
+        
+    try:
+        stellar_account = ElinkStellarAccount.objects.filter(account=account_id)\
+                            or ElinkStellarAccount.objects.filter(memo=account_id)
+
+        if stellar_account.count() == 1:
+            return stellar_account.values()[0]
+
+        return None
+    except:
+        print('Error')
+        return None
+
+def verify_bank_account(routing_number, account_number):
+    
+    return True
+    # try:
+    #     stellar_account = ElinkStellarAccount.objects.filter(account=account_id)\
+    #                         or ElinkStellarAccount.objects.filter(memo=account_id)
+
+    #     if stellar_account.count() == 1:
+    #         return stellar_account.values()[0]
+
+    #     return None
+    # except:
+    #     print('Error')
+    #     return None
+
 def save_customer(account, fields):
     try:
         return ElinkStellarAccount.objects.create(
