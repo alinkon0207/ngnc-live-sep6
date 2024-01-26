@@ -138,8 +138,8 @@ class ElinkStellarAccount(models.Model):
     class Meta:
         unique_together = ["memo", "account", "muxed_account"]
 
-    def __str__(self):
-        return f"{str(self.user)}: {str(self.muxed_account or self.account)} (memo: {str(self.memo)})"
+    # def __str__(self):
+    #     return f"{str(self.user)}: {str(self.muxed_account or self.account)} (memo: {str(self.memo)})"
 
 
 class ElinkUserTransaction(models.Model):
