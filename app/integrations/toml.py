@@ -56,12 +56,5 @@ def toml_contents(request, *args, **kwargs):
         "anchor_asset": "NGN",
         "status": "test",
       },
-      {
-        "code": "SRT",
-        "issuer": "GCDNJUBQSX7AJWLJACMJ7I4BC3Z47BQUTMHEICZLE6MU4KQBRYG5JY6B",
-        "status": "test",
-        "is_asset_anchored": "false",
-        "desc": "Stellar Reference Token (SRT) is an asset issued on testnet and is used as an anchored asset for this reference server for demonstration and testing purposes."
-      }
     ]
   }
